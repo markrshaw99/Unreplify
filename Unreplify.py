@@ -15,7 +15,11 @@ def unreplify_main():
     2 - Strip The Text of REPL prompts and output a clean formatted string
     3 - Take this new variable and copy it to clipboard
     """
-    return
+    original_repl = retrieve_clipboard()
+    unreplified = clean_string(original_repl)
+    set_clipboard(unreplified)
+
+    return("Complete")
 
 def retrieve_clipboard():
     """Access using pbpaste"""
