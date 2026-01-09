@@ -8,15 +8,15 @@ PROMPTS = (">>>", "...")
 OPTIONAL_AFTER_PROMPT = (" ", "\t", "\u00A0")
 
 
-def unreplify_main():
+def unreplify():
     """
     This Function will be the main function
     1 - Access clipboard and store as variable
     2 - Strip The Text of REPL prompts and output a clean formatted string
     3 - Take this new variable and copy it to clipboard
     """
-    original_repl = retrieve_clipboard()
-    unreplified = clean_string(original_repl)
+    repl_string = retrieve_clipboard()
+    unreplified = unreplify_string(repl_string)
     set_clipboard(unreplified)
 
     return("Complete")
@@ -29,5 +29,18 @@ def set_clipboard(text):
     """Set using pbcopy"""
     subprocess.run(["pbcopy"], input=text, text=True)
 
-def clean_string(text):
+def unreplify_string(text):
+    lines = text.splitlines() # Need to add \n in after cleaning
+    unreplified_lines = []
+
+    for line in lines:
+        if line.startswith(PROMPTS):
+            line = line[3:] # Removes first 3 charachters
+
+            if line.startswith(OPTIONAL_AFTER_PROMPT):
+                line = line[1:] # Removes the tab, space or NBS from new line
+        unreplified_lines.append(line)
+    
+    return "\n".join(unreplified_lines) # Joins the lines back together
+        
     return()
