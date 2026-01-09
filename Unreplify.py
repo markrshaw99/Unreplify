@@ -20,8 +20,17 @@ def unreplify():
     set_clipboard(unreplified)
 
     """Time to add in some different exit codes for 3 sscenarios"""
+    # If Clipboard is empty return 2
+    if repl_string.strip() == "":
+        return 2
     
-    return("Complete")
+    # If stripping did not change anything, don't touch the clipboard.
+    if unreplified == repl_string:
+        return 1
+    
+    #Otherwise carry on
+    set_clipboard(unreplified)
+    return 0
 
 def retrieve_clipboard():
     """Access using pbpaste"""
@@ -44,5 +53,3 @@ def unreplify_string(text):
         unreplified_lines.append(line)
     
     return "\n".join(unreplified_lines) # Joins the lines back together
-        
-    return()
