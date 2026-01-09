@@ -19,11 +19,11 @@ def unreplify_main():
 
 def retrieve_clipboard():
     """Access using pbpaste"""
-    return()
+    return subprocess.check_output(["pbpaste"], text=True)
 
-def set_clipboard():
+def set_clipboard(text):
     """Set using pbcopy"""
-    return()
+    subprocess.run(["pbcopy"], input=text, text=True)
 
-def clean_string():
+def clean_string(text):
     return()
