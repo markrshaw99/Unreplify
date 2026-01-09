@@ -16,13 +16,13 @@ def unreplify():
     3 - Take this new variable and copy it to clipboard
     """
     repl_string = retrieve_clipboard()
-    unreplified = unreplify_string(repl_string)
-    set_clipboard(unreplified)
 
-    """Time to add in some different exit codes for 3 sscenarios"""
     # If Clipboard is empty return 2
     if repl_string.strip() == "":
         return 2
+    
+    unreplified = unreplify_string(repl_string)
+
     
     # If stripping did not change anything, don't touch the clipboard.
     if unreplified == repl_string:
@@ -53,3 +53,8 @@ def unreplify_string(text):
         unreplified_lines.append(line)
     
     return "\n".join(unreplified_lines) # Joins the lines back together
+
+# Only run the program when this file is executed directly.
+# If the file is imported (for reuse/testing), don't auto-run main() or touch the clipboard.
+if __name__ == "__main__":
+    raise SystemExit(unreplify())
