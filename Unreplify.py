@@ -19,6 +19,8 @@ def unreplify():
     unreplified = unreplify_string(repl_string)
     set_clipboard(unreplified)
 
+    """Time to add in some different exit codes for 3 sscenarios"""
+    
     return("Complete")
 
 def retrieve_clipboard():
