@@ -13,9 +13,15 @@ It’s designed to be triggered via a **global keyboard shortcut** using a macOS
 Many Python tutorials, documentation pages, and books present examples in REPL format, such as:
 
 ```text
->>> class Person:
+>>> class Greeter():
 ...     def __init__(self, name):
 ...         self.name = name
+...
+...     def hello(self):
+...         return f"Hello, {self.name}"
+...
+>>> greeter = Greeter("Alan")
+>>> greeter.hello()
 ```
 
 Pasting this directly into a `.py` file results in syntax errors.
@@ -23,9 +29,15 @@ Pasting this directly into a `.py` file results in syntax errors.
 Unreplify automatically removes the REPL prompts so the result becomes valid Python source code:
 
 ```python
-class Person:
+class Greeter():
     def __init__(self, name):
         self.name = name
+
+    def hello(self):
+        return f"Hello, {self.name}"
+
+greeter = Greeter("Alan")
+greeter.hello()
 ```
 
 ---
