@@ -61,7 +61,7 @@ greeter.hello()
 	* No REPL prompts found
 	* Clipboard empty
 * Different system sounds for each outcome
-* 1-second auto-dismissing pop-up confirmation
+* 2-second auto-dismissing pop-up confirmation
 * No visible Terminal windows
 * No third-party Python dependencies
 * Fully macOS-native (Automator + AppleScript)
@@ -130,7 +130,7 @@ fi
 
 afplay "$sound" >/dev/null 2>&1 &
 /usr/bin/osascript <<APPLESCRIPT
-display dialog "$msg" with title "unreplify" giving up after 1
+display dialog "$msg" with title "unreplify" giving up after 2
 APPLESCRIPT
 ```
 
