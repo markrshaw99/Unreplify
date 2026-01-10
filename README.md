@@ -14,7 +14,9 @@ It’s designed to be triggered via a **global keyboard shortcut** using a macOS
 
 ## Setup video
 
-[![Setup video](docs/setup-thumbnail.png)](docs/unreplify_setup.mp4)
+![Setup demo](docs/unreplify_setup.gif)
+
+[Full setup video (MP4)](docs/unreplify_setup.mp4)
 
 ## The problem it solves
 
