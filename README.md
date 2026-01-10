@@ -12,6 +12,10 @@ It’s designed to be triggered via a **global keyboard shortcut** using a macOS
 
 ---
 
+## Setup video
+
+[![Setup video](docs/setup-thumbnail.png)](docs/unreplify_setup.mp4)
+
 ## The problem it solves
 
 Many Python tutorials, documentation pages, and books present examples in REPL format, such as:
