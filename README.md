@@ -1,7 +1,7 @@
 # Unreplify
 
 <p align="center">
-	<img src="UnreplifyLogo.png" alt="Unreplify logo" width="220" />
+	<img src="UnreplifyLogo.png" alt="Unreplify logo" width="300" />
 </p>
 
 Unreplify is a small macOS utility that removes Python REPL prompts (`>>>` and `...`) from copied code, so it can be pasted directly into `.py` files without manual editing.
