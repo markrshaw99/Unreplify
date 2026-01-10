@@ -1,5 +1,9 @@
 # Unreplify
 
+<p align="center">
+	<img src="UnreplifyLogo.png" alt="Unreplify logo" width="220" />
+</p>
+
 Unreplify is a small macOS utility that removes Python REPL prompts (`>>>` and `...`) from copied code, so it can be pasted directly into `.py` files without manual editing.
 
 It strips prompts only when they appear at the **start of a line**, and it also removes **one optional separator character** after the prompt (space, tab, or a non-breaking space).
